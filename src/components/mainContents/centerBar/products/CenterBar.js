@@ -3,7 +3,7 @@ import ProductsToBeDisplayed from './ProductsToBeDisplayed'
 function CenterBar(){
     return (
         <div id='centerBar'>
-            <ProductsToBeDisplayed categorytype='all'/>
+            <ProductsToBeDisplayed categoryType='all'/>
         </div>
     )
 }

@@ -10,7 +10,9 @@ function belongsToCategory(currentProduct){
 };
 
 function getDisplayProductsData(categoryType){
+    //console.log(categoryType);
     const displayProductsData = productsData.filter(belongsToCategory, categoryType);
+    //console.log(displayProductsData);
     return displayProductsData;
 }
 

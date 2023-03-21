@@ -2,7 +2,7 @@ function Offer(props){
     return (
         <div className='offer'>
             <strong>
-                {props.offerInnerContent};
+                {props.offerInnerContent}% OFF
             </strong>
         </div>
     )
