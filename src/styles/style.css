@@ -1,0 +1,226 @@
+body {
+    margin: 0;
+}
+
+.headerDetails{
+    display: flex;
+    justify-content: space-between;
+}
+
+.headerLeft{
+    display: flex;
+    /*justify-content: flex-start;*/
+}
+
+.headerRight{
+    display: flex;
+}
+
+.logo{
+    display: flex;
+    font-size: 40px;
+    margin-right: 2rem;
+    font-weight: 900;
+    border-right: 1px solid grey;
+}
+
+.logoP1{
+    color:gold;
+}
+
+.logoP2{
+    color:forestgreen;
+}
+
+.deliveryDetails{
+    display: flex;
+    flex-direction: column;
+}
+
+.deliveryArea{
+    border: none;
+}
+
+.loginButton{
+    display: flex;
+    border: none;
+    background: white;
+    margin-right: 3rem;
+    align-items: center;
+}
+
+#myCartButton{
+    display: flex;
+    border: none;
+    background: green;
+    align-items: center;
+    margin: 1px 6px;
+}
+
+.cartImage{
+    display: flex;
+    height: 2rem;
+    width: 2rem;
+}
+
+.myCart{
+    display: flex;
+}
+
+.navigationBar{
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+}
+
+.navDetails{
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.navButtons{
+    border: none;
+    background: white;
+    margin-right: 3rem;
+    align-items: center;
+}
+
+#mainContent {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+
+#mainContentDetails{
+    display: flex;
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+    border-bottom: 1px solid grey;
+   /* border: 2px solid grey;*/
+}
+
+#sidebar{
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebarButton{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border: solid 1px grey;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+   /* border-left: 1px solid grey;
+    border-bottom: 1px solid grey;*/
+    /*background-color: chartreuse;
+    border-left-color: green;*/
+}
+
+.sidebarButton:hover{
+    background-color: green;
+}
+
+.sidebarImage{
+    display: flex;
+    height: 2rem;
+    width: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.sidebarText{
+    display: flex;
+}
+
+#centerBar{
+    flex-grow: 2;
+}
+
+.topBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 1px solid grey;
+    border-bottom: 1px solid grey;
+}
+
+.topBarText{
+    display: flex;
+    margin-bottom: 1rem;
+    margin-left: 0.5rem;
+    margin-top: 1rem;
+}
+
+.topBarDropdown{
+    display: flex;
+    margin-right: 1rem;
+}
+
+#productsToBeDisplayed{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.cost p{
+    text-decoration: line-through;
+}
+
+.costAdd{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.minusProductCountPlus{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.card{
+    border-bottom: 1px solid grey;
+    border-left: 1px solid grey;
+}
+
+.cardImages{
+    height: 10rem;
+    width: 18rem;
+}
+
+.card.ten{
+    border-bottom: none;
+    border-right: 1px solid grey;;
+}
+
+.offer{
+    background-color: blue;
+    color: white;
+    width: max-content;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+}
+
+.source{
+    width: max-content;
+     margin-left: auto;
+    color: rgb(121, 236, 121);
+    background-color: rgb(214, 248, 214);
+}
+
+.cost p{
+    margin-top:0.5px;
+}
+
+.addButton{
+    color: green;
+    background: transparent;
+}
+
+button{
+    cursor: pointer;
+}
