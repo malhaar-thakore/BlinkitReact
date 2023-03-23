@@ -5,16 +5,19 @@ import ProductsToBeDisplayed from '../centerBar/products/ProductsToBeDisplayed'
 function CategoryButton(props){
     const {categoryImage, categoryText, categoryType} = props.category;
 
-    function callComponentProductsToBeDisplayed(categoryType){
-        return <ProductsToBeDisplayed categorytype={categoryType}/>;
-    }
-
     return (
-        <button className='sidebarButton' onclick={() => callComponentProductsToBeDisplayed(categoryType)}>
+        <button className='sidebarButton' onClick={() => callComponentProductsToBeDisplayed(categoryType)}>
             <CategoryButtonImage categoryImageSrc={categoryImage}/>
             <CategoryButtonText categoryTextInnerHtml={categoryText}/>
         </button>
     )
+
+    function callComponentProductsToBeDisplayed(categoryType){
+            //console.log(categoryType);
+            return(
+                <ProductsToBeDisplayed categoryType={categoryType}/>
+            )
+    }
 }
 
 export default CategoryButton
