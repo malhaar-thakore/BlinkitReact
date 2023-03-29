@@ -4,7 +4,7 @@ import cartImg from "../images/cart-image.png";
 
 function Header() {
   return (
-    <Fragment>
+
       <section classNameName="header">
         <header className="headerDetails">
 
@@ -26,14 +26,13 @@ function Header() {
 
           <section className="headerRight">
             <button className="loginButton">Login</button>
-            <button id="myCartButton">
+            <button className="myCartButton">
               <img className="cartImage" src={cartImg} />
               <strong className="myCart">My Cart</strong>
             </button>
           </section>
         </header>
       </section>
-    </Fragment>
   )
 }
 

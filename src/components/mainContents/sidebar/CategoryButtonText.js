@@ -1,7 +1,8 @@
 function CategoryButtonText(props){
+    const {categoryButtonTextInnerHtml} = props
     return (
         <p className='sidebarText'>
-            {props.categoryTextInnerHtml}
+            {categoryButtonTextInnerHtml}
         </p>
     )
 }

@@ -3,7 +3,6 @@ import "../styles/style.css";
 
 function NavigationBar() {
     return (
-        <Fragment>
             <section className="navigationBar">
                 <div className="navDetails">
                     <button className="navButtons">Vegetables & Fruits</button>
@@ -23,7 +22,6 @@ function NavigationBar() {
                     </select>
                 </div>
             </section>
-        </Fragment>
     )
 }
 

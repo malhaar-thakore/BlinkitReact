@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import Offer from './Offer'
 import Image from './Image'
 import Source from './Source'
@@ -17,6 +18,15 @@ function Card(props){
             <MergeCostAddAndProductUpdate otherCardDetails={otherCardDetails}/>
         </div>
     )
+}
+
+Card.propTypes = {
+    offerInnerContent: PropTypes.number,
+    image: PropTypes.string,
+    sourceInnerContent: PropTypes.number,
+    titleInnerContent: PropTypes.string,
+    quantityInnerContent: PropTypes.string,
+    otherCardDetails: PropTypes.array
 }
 
 export default Card;

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import Cost from './Cost'
 import AddButton from './AddButton'
 
@@ -9,6 +10,11 @@ function MergeCostAddAndProductUpdate(props){
             <AddButton/>
         </div>
     )
+}
+
+MergeCostAddAndProductUpdate.propTypes = {
+    newCostInnerContent: PropTypes.number,
+    oldCostInnerContent: PropTypes.number
 }
 
 export default MergeCostAddAndProductUpdate;

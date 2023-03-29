@@ -1,23 +1,23 @@
+import PropTypes from 'prop-types'
 import CategoryButtonImage from './CategoryButtonImage';
 import CategoryButtonText from './CategoryButtonText';
-import ProductsToBeDisplayed from '../centerBar/products/ProductsToBeDisplayed'
 
 function CategoryButton(props){
     const {categoryImage, categoryText, categoryType} = props.category;
+    const updateCategoryType = props.updateCategoryType
 
     return (
-        <button className='sidebarButton' onClick={() => callComponentProductsToBeDisplayed(categoryType)}>
-            <CategoryButtonImage categoryImageSrc={categoryImage}/>
-            <CategoryButtonText categoryTextInnerHtml={categoryText}/>
+        <button className='sidebarButton' onClick={() => updateCategoryType(categoryType)}>
+            <CategoryButtonImage categoryButtonImageSrc={categoryImage}/>
+            <CategoryButtonText categoryButtonTextInnerHtml={categoryText}/>
         </button>
     )
 
-    function callComponentProductsToBeDisplayed(categoryType){
-            //console.log(categoryType);
-            return(
-                <ProductsToBeDisplayed categoryType={categoryType}/>
-            )
-    }
+}
+
+CategoryButton.propTypes = {
+    categoryImageSrc: PropTypes.string,
+    categoryTextInnerHtml: PropTypes.string
 }
 
 export default CategoryButton

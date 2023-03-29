@@ -1,4 +1,4 @@
-import productsData from './productsData';
+import productsData from '../../../../../data/productsData';
 
 function belongsToCategory(currentProduct){
     if(currentProduct.categories.includes(this)){
@@ -9,11 +9,9 @@ function belongsToCategory(currentProduct){
     }
 };
 
-function getDisplayProductsData(categoryType){
-    //console.log(categoryType);
+function getProductsFilteredByCategory(categoryType){
     const displayProductsData = productsData.filter(belongsToCategory, categoryType);
-    //console.log(displayProductsData);
     return displayProductsData;
 }
 
-export default getDisplayProductsData
+export default getProductsFilteredByCategory

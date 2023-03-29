@@ -1,11 +1,17 @@
+import PropTypes from 'prop-types'
 import ProductsToBeDisplayed from './ProductsToBeDisplayed'
 
-function CenterBar(){
+function CenterBar(props){
+    const {category} = props
     return (
-        <div id='centerBar'>
-            <ProductsToBeDisplayed categoryType='all'/>
+        <div className='centerBar'>
+            <ProductsToBeDisplayed categoryType={category}/>
         </div>
     )
+}
+
+CenterBar.propTypes = {
+    categoryType: PropTypes.string
 }
 
 export default CenterBar;

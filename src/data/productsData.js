@@ -11,7 +11,8 @@ const PRODUCTS_CATEGORY_TYPES = {
 
 let productsData = [];
 
-function Product({offer, image, source, title, quantity, newCost, oldCost, categories, productCount}){
+function Product({id, offer, image, source, title, quantity, newCost, oldCost, categories, productCount}){
+    this.id = id;
     this.offer = offer;
     this.image = image;
     this.source = source;
@@ -26,6 +27,7 @@ function Product({offer, image, source, title, quantity, newCost, oldCost, categ
 function createProducts(){
     productsData = [
         new Product({
+            id: 1,
             offer: 11, 
             image: 'images/potato-img.png', 
             source: 5, 
@@ -37,6 +39,7 @@ function createProducts(){
             productCount: 0, 
             }),
         new Product({
+            id: 2,
             offer: 21,
             image: 'images/onion-img.png',
             source: 5, 
@@ -49,6 +52,7 @@ function createProducts(){
             }),
 
         new Product({
+            id: 3,
             offer: 10,
             image: 'images/carrot-img.jpeg', source: 5,
             title: 'Local Carrot',
@@ -60,6 +64,7 @@ function createProducts(){
             }),
 
         new Product({
+            id: 4,
             offer: 16,
             image: 'images/green-chilli-img.png',
             source: 5, 
@@ -72,6 +77,7 @@ function createProducts(){
             }),
 
         new Product({
+            id: 5,
             offer: 21,
             image: 'images/hybrid-tomato.png',
             source: 5,
@@ -84,6 +90,7 @@ function createProducts(){
             }),
 
         new Product({
+            id: 6,
             offer: 17,
             image: 'images/cauliflower.jpeg',
             source: 5,
@@ -96,6 +103,7 @@ function createProducts(){
             }),
         
         new Product({
+            id: 7,
             offer: 11,
             image: 'images/potato-img.png',
             source: 5,
@@ -108,6 +116,7 @@ function createProducts(){
             }),
 
         new Product({
+            id: 8,
             offer: 21,
             image: 'images/onion-img.png',
             source: 5,
@@ -120,6 +129,7 @@ function createProducts(){
             }),
 
         new Product({
+            id: 9,
             offer: 10,
             image: 'images/carrot-img.jpeg',
             source: 5,
@@ -132,6 +142,7 @@ function createProducts(){
             }),
 
         new Product({
+            id: 10,
             offer: 16,
             image: 'images/green-chilli-img.png',
             source: 5,
@@ -144,6 +155,7 @@ function createProducts(){
             }),
 
         new Product({
+            id: 11,
             offer: 21,
             image: 'images/hybrid-tomato.png',
             source: 5,
@@ -156,6 +168,7 @@ function createProducts(){
             }),
 
         new Product({
+            id: 12,
             offer: 11,
             image: 'images/potato-img.png',
             source: 5,
@@ -168,6 +181,7 @@ function createProducts(){
             }),
 
         new Product({
+            id: 13,
             offer: 21,
             image: 'images/onion-img.png',
             source: 5,
@@ -180,6 +194,7 @@ function createProducts(){
             }),
 
         new Product({
+            id: 14,
             offer:10,
             image: 'images/carrot-img.jpeg',
             source: 5,
@@ -192,6 +207,7 @@ function createProducts(){
             }),
 
         new Product({
+            id: 15,
             offer: 16,
             image: 'images/green-chilli-img.png',
             source: 5,
@@ -204,6 +220,7 @@ function createProducts(){
             }),
 
         new Product({
+            id: 16,
             offer: 11,
             image: 'images/potato-img.png',
             source: 5,
@@ -216,6 +233,7 @@ function createProducts(){
             }),
 
         new Product({
+            id: 17,
             offer: 21,
             image: 'images/onion-img.png',
             source: 5,
@@ -228,6 +246,7 @@ function createProducts(){
             }),
 
         new Product({
+            id: 18,
             offer: 10,
             image: 'images/carrot-img.jpeg',
             source: 5,
@@ -240,6 +259,7 @@ function createProducts(){
             }),
 
         new Product({
+            id: 19,
             offer: 11,
             image: 'images/potato-img.png',
             source: 5,
@@ -252,6 +272,7 @@ function createProducts(){
             }),
 
         new Product({
+            id: 20,
             offer: 21,
             image: 'images/onion-img.png',
             source: 5,
@@ -264,6 +285,7 @@ function createProducts(){
             }),
 
         new Product({
+            id: 21,
             offer: 11,
             image: 'images/potato-img.png',
             source: 5,
