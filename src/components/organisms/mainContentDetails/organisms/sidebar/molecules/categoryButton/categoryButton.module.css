@@ -1,0 +1,14 @@
+.categoryButton{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border: solid 1px grey;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+}
+
+.categoryButton:hover{
+    background-color: green;
+}

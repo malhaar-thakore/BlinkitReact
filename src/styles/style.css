@@ -86,14 +86,18 @@ body {
     align-items: center;
 }
 
-.mainContent {
+/* .mainContent {
     width: 70%;
     margin-left: auto;
     margin-right: auto;
     overflow: hidden;
-}
+} */
 
 .mainContentDetails{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
     display: flex;
     border-left: 1px solid grey;
     border-right: 1px solid grey;
@@ -115,10 +119,6 @@ body {
     border-right: none;
     border-left: none;
     border-top: none;
-   /* border-left: 1px solid grey;
-    border-bottom: 1px solid grey;*/
-    /*background-color: chartreuse;
-    border-left-color: green;*/
 }
 
 .sidebarButton:hover{
@@ -137,9 +137,9 @@ body {
     display: flex;
 }
 
-.centerBar{
+/* .centerBar{
     flex-grow: 2;
-}
+} */
 
 .topBar{
     display: flex;
@@ -162,12 +162,14 @@ body {
 }
 
 .productsToBeDisplayed{
+    flex-grow: 2;
     display: grid;
     grid-template-columns: repeat(3,1fr);
 }
 
 .cost p{
     text-decoration: line-through;
+    margin-top:0.5px;
 }
 
 .costAdd{
@@ -212,9 +214,7 @@ body {
     background-color: rgb(214, 248, 214);
 }
 
-.cost p{
-    margin-top:0.5px;
-}
+
 
 .addButton{
     color: green;
