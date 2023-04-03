@@ -1,7 +1,9 @@
 function Quantity(props){
+    const {quantityInnerContent} = props;
+
     return (
         <p>
-            {props.quantityInnerContent}
+            {quantityInnerContent}
         </p>
     )
 }

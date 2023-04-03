@@ -1,7 +1,9 @@
 function Title(props){
+    const {titleInnerContent} = props
+
     return (
             <strong className='cardTitle'>
-                {props.titleInnerContent}
+                {titleInnerContent}
             </strong>
     )
 }

@@ -4,11 +4,12 @@ import OldCost from './atoms/oldCost';
 import styles from './cost.module.css'
 
 function Cost(props){
+    const {newCostInnerContent, oldCostInnerContent} = props
     
     return(
         <div className={styles.cost}>
-            <NewCost newCostInnerContent={props.newCostInnerContent}/>
-            <OldCost oldCostInnerContent={props.oldCostInnerContent}/>
+            <NewCost newCostInnerContent={newCostInnerContent}/>
+            <OldCost oldCostInnerContent={oldCostInnerContent}/>
         </div>
     )
 }

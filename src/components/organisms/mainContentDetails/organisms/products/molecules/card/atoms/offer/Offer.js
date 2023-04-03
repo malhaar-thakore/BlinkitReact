@@ -1,10 +1,11 @@
 import styles from './offer.module.css';
 
 function Offer(props){
+    const {offerInnerContent} = props;
     return (
         <div className={styles.offer}>
             <strong>
-                {props.offerInnerContent}% OFF
+                {offerInnerContent}% OFF
             </strong>
         </div>
     )

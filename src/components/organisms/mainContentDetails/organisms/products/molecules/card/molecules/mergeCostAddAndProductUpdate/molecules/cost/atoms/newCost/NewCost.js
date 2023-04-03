@@ -1,8 +1,9 @@
 function NewCost(props){
-    
+    const {newCostInnerContent} = props;
+
     return(
         <strong>
-            Rs. {props.newCostInnerContent}
+            Rs. {newCostInnerContent}
         </strong>
     )
 }

@@ -7,8 +7,6 @@ import styles from './products.module.css';
 class Products extends React.Component {
     constructor(props) {
         super(props);
-        // console.log(props.category);
-        // console.log(this.props.category);
         this.productsFilteredByCategory = getProductsFilteredByCategory(props.category);
         this.state = {
             productsFilteredByCategoryDataStatus: 'waiting'
