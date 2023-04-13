@@ -13,7 +13,7 @@ function NavigationBar() {
                     <button className="navButtons">Tea, Coffee & Health Drinks</button>
                     <button className="navButtons">Bakery & Biscuits</button>
 
-                    <label for="moreTypesOfProducts"></label>
+                    <label htmlFor="moreTypesOfProducts"></label>
                     <select className="navButtons" name="moreTypesOfProducts" id="moreTypesOfProducts">
                         <option value="more">More</option>
                         <option value="a">A</option>

@@ -5,7 +5,7 @@ import cartImg from "../images/cart-image.png";
 function Header() {
   return (
 
-      <section classNameName="header">
+      <section className="header">
         <header className="headerDetails">
 
           <section className="headerLeft">
