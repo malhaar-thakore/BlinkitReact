@@ -1,22 +1,23 @@
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
-import getProductsFilteredByCategory from './productsFilteredByCategoryData';
+import { getProductsFilteredByCategory } from '../../../../../redux/selectors';
+import { connect } from 'react-redux';
 import Card from './molecules/card';
 import styles from './products.module.css';
 
 class Products extends React.Component {
     constructor(props) {
         super(props);
-        this.productsFilteredByCategory = getProductsFilteredByCategory(props.category);
         this.state = {
             productsFilteredByCategoryDataStatus: 'waiting'
         }
     }
 
     componentDidMount() {
+        const { productsFilteredByCategory } = this.props;
         const isproductsFilteredByCategoryDataRetrievedPromise = new Promise((resolve, reject) => {
             setTimeout(() => {
-                if (this.productsFilteredByCategory) {
+                if (productsFilteredByCategory) {
                     resolve();
                 }
                 else {
@@ -36,40 +37,54 @@ class Products extends React.Component {
         });
     }
 
+    renderLoadingMessage() {
+        return (
+            <p className={styles.products}>
+                Loading Products
+            </p>
+        );
+    }
+
+    renderProducts() {
+        const { productsFilteredByCategory } = this.props;
+        return (
+            <div className={styles.products}>
+                {productsFilteredByCategory.map((currentProduct) => (
+                    <Card key={currentProduct.id} currentProduct={currentProduct} />
+                ))}
+            </div>
+        );
+    }
+
+    renderFailureMessage() {
+        return (
+            <p>
+                Failed to load Products
+            </p>
+        );
+    }
 
     render() {
-        //console.log(this.props.category);
-        this.productsFilteredByCategory = getProductsFilteredByCategory(this.props.category);
-        if (this.state.productsFilteredByCategoryDataStatus == 'waiting') {
-            return (
-                <p className={styles.products}>
-                    Loading Products
-                </p>
-            )
-        }
+        const { productsFilteredByCategoryDataStatus } = this.state;
 
-        else if (this.state.productsFilteredByCategoryDataStatus == 'retrieved') {
-            return (
-                <div className={styles.products}>
-                    {this.productsFilteredByCategory.map((currentProduct) => (
-                        <Card key={currentProduct.id} currentProduct={currentProduct} />
-                    ))}
-                </div>
-            )
-        }
+        if (productsFilteredByCategoryDataStatus === 'waiting')
+            return this.renderLoadingMessage();
 
-        else {
-            return (
-                <p>
-                    Failed to load Products
-                </p>
-            )
-        }
+        if (productsFilteredByCategoryDataStatus === 'retrieved')
+            return this.renderProducts();
+
+        return this.renderFailureMessage();
     }
 }
 
 Products.propTypes = {
-    currentProduct: PropTypes.object
+    productsFilteredByCategory: PropTypes.array.isRequired
+};
+
+function mapStateToProps(state, ownProps) {
+    return {
+        productsFilteredByCategory: getProductsFilteredByCategory(state, ownProps.category)
+    };
 }
 
-export default Products
+export default connect(mapStateToProps, null)(Products);

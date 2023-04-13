@@ -3,7 +3,7 @@ function OldCost(props){
 
     return (
         <p>
-            Rs. {props.oldCostInnerContent}
+            Rs. {oldCostInnerContent}
         </p>
     )
 }
