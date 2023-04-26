@@ -47,10 +47,11 @@ class Products extends React.Component {
 
     renderProducts() {
         const { productsFilteredByCategory } = this.props;
+
         return (
             <div className={styles.products}>
                 {productsFilteredByCategory.map((currentProduct) => (
-                    <Card key={currentProduct.id} currentProduct={currentProduct} />
+                    <Card key={currentProduct[0]} currentProduct={currentProduct} />
                 ))}
             </div>
         );

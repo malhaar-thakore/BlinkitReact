@@ -2,8 +2,10 @@ import styles from './minusProductCountPlus.module.css';
 import { connect } from 'react-redux';
 import { incrementProductCount, decrementProductCount } from '../../../../../../../../../../../../../redux/actions';
 
+
 function MinusProductCountPlus(props){
-    const { productCount } = props
+    const { productCount } = props;
+    //console.log(productCount);
     return(
         <div className={styles.minusProductCountPlus}>
             <button onClick={props.decrementProductCount}>
@@ -20,7 +22,7 @@ function MinusProductCountPlus(props){
 }
 
 const mapDispatchToProps = (dispatch, ownProps) => {
-    const { productId } = ownProps
+    const { productId } = ownProps;
     return {
         incrementProductCount: () => dispatch(incrementProductCount(productId)),
         decrementProductCount: () => dispatch(decrementProductCount(productId))

@@ -1,10 +1,11 @@
 import styles from './addButton.module.css';
 import { connect } from 'react-redux';
-import { incrementProductCount } from '../../../../../../../../../../../../../redux/actions'
+import { incrementProductCount } from '../../../../../../../../../../../../../redux/actions';
 
 function AddButton(props){
+    const { incrementProductCount } = props;
     return(
-        <button className={styles.addButton} onClick={props.incrementProductCount}>
+        <button className={styles.addButton} onClick={incrementProductCount}>
             ADD
         </button>
     )
@@ -12,7 +13,7 @@ function AddButton(props){
 
 const mapDispatchToProps = (dispatch, ownProps) => {
     return {
-        incrementProductCount: () => dispatch(incrementProductCount(ownProps.productId))
+        incrementProductCount : () => dispatch(incrementProductCount(ownProps.productId))
     }
 }
 

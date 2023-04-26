@@ -12,7 +12,6 @@ const PRODUCTS_CATEGORY_TYPES = {
 let productsData = [];
 
 function Product({id, offer, image, source, title, quantity, newCost, oldCost, categories, productCount}){
-    this.id = id;
     this.offer = offer;
     this.image = image;
     this.source = source;
@@ -21,13 +20,11 @@ function Product({id, offer, image, source, title, quantity, newCost, oldCost, c
     this.newCost = newCost;
     this.oldCost = oldCost;
     this.categories = categories;
-    this.productCount = productCount
 };
 
 function createProducts(){
-    productsData = [
-        new Product({
-            id: 1,
+    productsData = {
+        '1' : new Product({
             offer: 11, 
             image: 'images/potato-img.png', 
             source: 5, 
@@ -35,11 +32,9 @@ function createProducts(){
             quantity: '1 Kg', 
             newCost: 15, 
             oldCost: 17, 
-            categories: PRODUCTS_CATEGORY_TYPES.card + ' ' + PRODUCTS_CATEGORY_TYPES.all + ' ' + PRODUCTS_CATEGORY_TYPES.freshVegetables, 
-            productCount: 0, 
+            categories: PRODUCTS_CATEGORY_TYPES.card + ' ' + PRODUCTS_CATEGORY_TYPES.all + ' ' + PRODUCTS_CATEGORY_TYPES.freshVegetables,
             }),
-        new Product({
-            id: 2,
+        '2' : new Product({
             offer: 21,
             image: 'images/onion-img.png',
             source: 5, 
@@ -48,11 +43,9 @@ function createProducts(){
             newCost: 32,
             oldCost: 41,
             categories: PRODUCTS_CATEGORY_TYPES.card + ' ' + PRODUCTS_CATEGORY_TYPES.all + ' ' + PRODUCTS_CATEGORY_TYPES.freshVegetables,
-            productCount: 0,
             }),
 
-        new Product({
-            id: 3,
+        '3' : new Product({
             offer: 10,
             image: 'images/carrot-img.jpeg', source: 5,
             title: 'Local Carrot',
@@ -60,11 +53,9 @@ function createProducts(){
             newCost: 17,
             oldCost: 19,
             categories: PRODUCTS_CATEGORY_TYPES.card + ' ' + PRODUCTS_CATEGORY_TYPES.all + ' ' + PRODUCTS_CATEGORY_TYPES.freshVegetables,
-            productCount: 0,
             }),
 
-        new Product({
-            id: 4,
+        '4' : new Product({
             offer: 16,
             image: 'images/green-chilli-img.png',
             source: 5, 
@@ -73,11 +64,9 @@ function createProducts(){
             newCost: 10,
             oldCost: 12,
             categories: PRODUCTS_CATEGORY_TYPES.card + ' ' + PRODUCTS_CATEGORY_TYPES.all + ' ' + PRODUCTS_CATEGORY_TYPES.freshVegetables,
-            productCount: 0,
             }),
 
-        new Product({
-            id: 5,
+        '5' : new Product({
             offer: 21,
             image: 'images/hybrid-tomato.png',
             source: 5,
@@ -86,11 +75,9 @@ function createProducts(){
             newCost: 15,
             oldCost: 17, 
             categories: PRODUCTS_CATEGORY_TYPES.card + ' ' + PRODUCTS_CATEGORY_TYPES.all + ' ' + PRODUCTS_CATEGORY_TYPES.freshVegetables,
-            productCount: 0,
             }),
 
-        new Product({
-            id: 6,
+        '6' : new Product({
             offer: 17,
             image: 'images/cauliflower.jpeg',
             source: 5,
@@ -99,11 +86,9 @@ function createProducts(){
             newCost: 15,
             oldCost: 19,
             categories: PRODUCTS_CATEGORY_TYPES.card + ' ' + PRODUCTS_CATEGORY_TYPES.all + ' ' + PRODUCTS_CATEGORY_TYPES.freshVegetables,
-            productCount: 0,
             }),
         
-        new Product({
-            id: 7,
+        '7' : new Product({
             offer: 11,
             image: 'images/potato-img.png',
             source: 5,
@@ -112,11 +97,9 @@ function createProducts(){
             newCost: 15,
             oldCost: 17,
             categories: PRODUCTS_CATEGORY_TYPES.card + ' ' + PRODUCTS_CATEGORY_TYPES.all + ' ' + PRODUCTS_CATEGORY_TYPES.freshFruits,
-            productCount: 0,
             }),
 
-        new Product({
-            id: 8,
+        '8' : new Product({
             offer: 21,
             image: 'images/onion-img.png',
             source: 5,
@@ -125,11 +108,9 @@ function createProducts(){
             newCost: 32,
             oldCost: 41,
             categories: PRODUCTS_CATEGORY_TYPES.card + ' ' + PRODUCTS_CATEGORY_TYPES.all + ' ' + PRODUCTS_CATEGORY_TYPES.freshFruits,
-            productCount: 0,
             }),
 
-        new Product({
-            id: 9,
+        '9' : new Product({
             offer: 10,
             image: 'images/carrot-img.jpeg',
             source: 5,
@@ -138,11 +119,9 @@ function createProducts(){
             newCost: 17,
             oldCost: 19,
             categories: PRODUCTS_CATEGORY_TYPES.card + ' ' + PRODUCTS_CATEGORY_TYPES.all + ' ' + PRODUCTS_CATEGORY_TYPES.freshFruits,
-            productCount: 0,
             }),
 
-        new Product({
-            id: 10,
+        '10' : new Product({
             offer: 16,
             image: 'images/green-chilli-img.png',
             source: 5,
@@ -151,11 +130,9 @@ function createProducts(){
             newCost: 10,
             oldCost: 12,
             categories: PRODUCTS_CATEGORY_TYPES.card + ' ' + PRODUCTS_CATEGORY_TYPES.all + ' ' + PRODUCTS_CATEGORY_TYPES.freshFruits,
-            productCount: 0,
             }),
 
-        new Product({
-            id: 11,
+        '11' : new Product({
             offer: 21,
             image: 'images/hybrid-tomato.png',
             source: 5,
@@ -164,11 +141,9 @@ function createProducts(){
             newCost: 15,
             oldCost: 17,
             categories: PRODUCTS_CATEGORY_TYPES.card + ' ' + PRODUCTS_CATEGORY_TYPES.all + ' ' + PRODUCTS_CATEGORY_TYPES.freshFruits,
-            productCount: 0,
             }),
 
-        new Product({
-            id: 12,
+        '12' : new Product({
             offer: 11,
             image: 'images/potato-img.png',
             source: 5,
@@ -177,11 +152,9 @@ function createProducts(){
             newCost: 15,
             oldCost: 17,
             categories: PRODUCTS_CATEGORY_TYPES.card + ' ' + PRODUCTS_CATEGORY_TYPES.all + ' ' + PRODUCTS_CATEGORY_TYPES.exotics,
-            productCount: 0,
             }),
 
-        new Product({
-            id: 13,
+        '13' : new Product({
             offer: 21,
             image: 'images/onion-img.png',
             source: 5,
@@ -190,11 +163,9 @@ function createProducts(){
             newCost: 32,
             oldCost: 41,
             categories: PRODUCTS_CATEGORY_TYPES.card + ' ' + PRODUCTS_CATEGORY_TYPES.all + ' ' + PRODUCTS_CATEGORY_TYPES.exotics,
-            productCount: 0,
             }),
 
-        new Product({
-            id: 14,
+        '14' : new Product({
             offer:10,
             image: 'images/carrot-img.jpeg',
             source: 5,
@@ -203,11 +174,9 @@ function createProducts(){
             newCost: 17,
             oldCost: 19,
             categories: PRODUCTS_CATEGORY_TYPES.card + ' ' + PRODUCTS_CATEGORY_TYPES.all + ' ' + PRODUCTS_CATEGORY_TYPES.exotics,
-            productCount: 0,
             }),
 
-        new Product({
-            id: 15,
+        '15' : new Product({
             offer: 16,
             image: 'images/green-chilli-img.png',
             source: 5,
@@ -216,11 +185,9 @@ function createProducts(){
             newCost: 10,
             oldCost: 12,
             categories: PRODUCTS_CATEGORY_TYPES.card + ' ' + PRODUCTS_CATEGORY_TYPES.all + ' ' + PRODUCTS_CATEGORY_TYPES.exotics,
-            productCount: 0,
             }),
 
-        new Product({
-            id: 16,
+        '16' : new Product({
             offer: 11,
             image: 'images/potato-img.png',
             source: 5,
@@ -229,11 +196,9 @@ function createProducts(){
             newCost: 15,
             oldCost: 17,
             categories: PRODUCTS_CATEGORY_TYPES.card + ' ' + PRODUCTS_CATEGORY_TYPES.all + ' ' + PRODUCTS_CATEGORY_TYPES.seasonal,
-            productCount: 0,
             }),
 
-        new Product({
-            id: 17,
+        '17' : new Product({
             offer: 21,
             image: 'images/onion-img.png',
             source: 5,
@@ -242,11 +207,9 @@ function createProducts(){
             newCost: 32,
             oldCost: 41,
             categories: PRODUCTS_CATEGORY_TYPES.card + ' ' + PRODUCTS_CATEGORY_TYPES.all + ' ' + PRODUCTS_CATEGORY_TYPES.seasonal,
-            productCount: 0,
             }),
 
-        new Product({
-            id: 18,
+        '18' : new Product({
             offer: 10,
             image: 'images/carrot-img.jpeg',
             source: 5,
@@ -255,11 +218,9 @@ function createProducts(){
             newCost: 17,
             oldCost: 19,
             categories: PRODUCTS_CATEGORY_TYPES.card + ' ' + PRODUCTS_CATEGORY_TYPES.all + ' ' + PRODUCTS_CATEGORY_TYPES.seasonal,
-            productCount: 0,
             }),
 
-        new Product({
-            id: 19,
+        '19' : new Product({
             offer: 11,
             image: 'images/potato-img.png',
             source: 5,
@@ -268,11 +229,9 @@ function createProducts(){
             newCost: 15,
             oldCost: 17,
             categories: PRODUCTS_CATEGORY_TYPES.card + ' ' + PRODUCTS_CATEGORY_TYPES.all + ' ' + PRODUCTS_CATEGORY_TYPES.organicHydroponic,
-            productCount: 0,
             }),
 
-        new Product({
-            id: 20,
+        '20' : new Product({
             offer: 21,
             image: 'images/onion-img.png',
             source: 5,
@@ -281,11 +240,9 @@ function createProducts(){
             newCost: 32,
             oldCost: 41,
             categories: PRODUCTS_CATEGORY_TYPES.card + ' ' + PRODUCTS_CATEGORY_TYPES.all + ' ' + PRODUCTS_CATEGORY_TYPES.organicHydroponic,
-            productCount: 0,
             }),
 
-        new Product({
-            id: 21,
+        '21' : new Product({
             offer: 11,
             image: 'images/potato-img.png',
             source: 5,
@@ -294,9 +251,8 @@ function createProducts(){
             newCost: 15,
             oldCost: 17,
             categories: PRODUCTS_CATEGORY_TYPES.card + ' ' + PRODUCTS_CATEGORY_TYPES.all + ' ' + PRODUCTS_CATEGORY_TYPES.freshlyCutSprouts,
-            productCount: 0,
             })
-    ]
+        }
 };
 
 createProducts();

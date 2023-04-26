@@ -23,14 +23,12 @@ class MainContentDetails extends React.Component {
     }
 
     updateCategoryType(newCategory) {
-        //console.log(newCategory);
         this.setState({
             category: newCategory
         });
     }
 
     render() {
-        //console.log(this.state.category);
         return (
             <div className={styles.mainContentDetails}>
                 <SidebarContents updateCategoryType={this.updateCategoryType}/>

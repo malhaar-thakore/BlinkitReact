@@ -1,8 +1,11 @@
 import AddButton from './atoms/addButton';
-import MinusProductCountPlus from './atoms/minusProductCountPlus'
+import MinusProductCountPlus from './atoms/minusProductCountPlus';
+import { connect } from 'react-redux';
+import { getProductCount } from '../../../../../../../../../../../redux/selectors'
 
 function AddButtonOrMinusProductCountPlus(props){
     const { productId, productCount } = props;
+    //console.log(productCount);
     //console.log(productCount);
     function renderAddButton(){
         //console.log('add button rendered');
@@ -16,13 +19,22 @@ function AddButtonOrMinusProductCountPlus(props){
             <MinusProductCountPlus productId={productId} productCount={productCount}/>
         )
     }
+    
     if(productCount === 0)
     {
-        //console.log('product count 0 verified');
         return renderAddButton();
     }
     else
         return renderMinusProductCountPlus();
 }
 
-export default AddButtonOrMinusProductCountPlus;
+
+
+const mapStateToProps = (state, ownProps) => {
+    const { productId } = ownProps;
+    return {
+        productCount : getProductCount(state, productId)
+    }
+}
+
+export default connect(mapStateToProps, null)(AddButtonOrMinusProductCountPlus);

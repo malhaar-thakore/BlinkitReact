@@ -5,11 +5,12 @@ import styles from './mergeCostAddAndProductUpdate.module.css';
 
 function MergeCostAddAndProductUpdate(props){
     //console.log(props.otherCardDetails);
-    const {id, newCost, oldCost, categories, productCount} = props.otherCardDetails;
+    const { newCost, oldCost, categories } = props.otherCardDetails;
+    const productId = props.productId;
     return (
         <div className={styles.mergeCostAddAndProductUpdate}>
             <Cost newCostInnerContent={newCost} oldCostInnerContent={oldCost}/>
-            <AddButtonOrMinusProductCountPlus productId={id} productCount={productCount}/>
+            <AddButtonOrMinusProductCountPlus productId={productId}/>
         </div>
     )
 }

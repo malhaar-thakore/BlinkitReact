@@ -8,7 +8,8 @@ import MergeCostAddAndProductUpdate from './molecules/mergeCostAddAndProductUpda
 import styles from './card.module.css';
 
 function Card(props){
-    const {offer, image, source, title, quantity, ...otherCardDetails} = props.currentProduct;
+    const {offer, image, source, title, quantity, ...otherCardDetails} = props.currentProduct[1];
+    const productId = props.currentProduct[0];
     return (
         <div className={styles.card}>
             <Offer offerInnerContent={offer}/>
@@ -16,7 +17,7 @@ function Card(props){
             <Source sourceInnerContent={source}/>
             <Title titleInnerContent={title}/>
             <Quantity quantityInnerContent={quantity}/>
-            <MergeCostAddAndProductUpdate otherCardDetails={otherCardDetails}/>
+            <MergeCostAddAndProductUpdate otherCardDetails={otherCardDetails} productId={productId}/>
         </div>
     )
 }
